@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextTask</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="container nav">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/girish-chauhan/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/GirishChauhan15" target="_blank">GitHub</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1 class="title">NextTask</h1>
+      <form class="input-form">
+        <div class="input-div">
+        <label for="task"
+          ><input autocomplete="off" maxlength="12" class="task-input" type="text" name="task" placeholder="Add your task" required
+        /></label>
+        <input type="date" name="date" required id="date-input" >
+        <button class="submit">ADD</button>
+    </div>
+      </form>
+      <div class="taskShowcase">
+        <h2 class="sub-header">On going...</h2>
+      </div>
+      <div class="taskCompleted">
+         <h2 class="sub-header-complete">Completed</h2>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>

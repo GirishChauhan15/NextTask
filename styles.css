@@ -1,0 +1,327 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #16171a;
+  --text: #f3f3f3;
+  --Color1: #cc95c0;
+  --Color2: #dbd4b4;
+  --Color3: #7aa1d2;
+  --gradientColor12: #ffffff;
+  --gradientColor22: #6284ff;
+  --gradientColor32: #ff0000;
+  --font1: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font2: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  --font3: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font1);
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  padding: 0 3em;
+}
+ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style: none;
+}
+a {
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+
+a:focus, a:hover {
+  background-color: var(--Color3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-color 1s ease-in-out .1s;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  background-image: linear-gradient(
+    315deg,
+    var(--gradientColor12),
+    var(--gradientColor22),
+    var(--gradientColor32)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  margin: 0.5em 0 0.3em 0;
+  text-align: center;
+}
+
+.input-div {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.handle-error {
+  font-family: var(--font3);
+  color: red;
+  font-weight: 100;
+  font-size: 0.7rem;
+  margin-top: 1em;
+}
+
+.task-input {
+  font-family: var(--font2);
+  background-color: var(--text);
+  color: var(--bg);
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin: 1em 0;
+}
+
+.task-input:focus,
+#date-input:focus {
+  border-bottom: 2px solid var(--Color1);
+}
+
+#date-input {
+  font-family: var(--font2);
+  background-color: var(--text);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 0.2em 0.5em;
+  margin: 0 0 1em 0;
+}
+
+.submit {
+  cursor: pointer;
+  font-family: var(--font2);
+  font-size: 1rem;
+  background-color: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--text);
+  outline: none;
+  padding: 0.4em 1.5em;
+  border-radius: 40px;
+}
+
+.submit:focus,
+.submit:hover {
+  /* background-color: var(--Color1); */
+  /* color: var(--text); */
+  border-color: var(--Color1);
+  transition: box-shadow 0.7s ease-out 0.2s;
+  box-shadow: inset 6em 0 0 0 var(--Color1);
+}
+
+.taskShowcase,
+.taskCompleted {
+  margin-top: 1em;
+}
+
+.sub-header,
+.sub-header-complete {
+  display: none;
+  color: var(--text);
+  margin: 0 auto;
+  padding: 0.5em 0;
+  width: 90%;
+}
+
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--Color3);
+  color: var(--bg);
+  box-shadow: 2px 3px 4px var(--text);
+  padding: 0.5em 0;
+}
+.card + .card {
+  margin-top: 1em;
+}
+
+.card-complete {
+  justify-content: space-around;
+  background-color: var(--Color2);
+}
+
+.insertTask,
+.completedTask {
+  font-size: 1rem;
+}
+.date {
+  margin-top: 0.2em;
+  font-size: 0.8rem;
+}
+/* .deleteTitle {
+  font-size: 1rem;
+} */
+.trash {
+  cursor: pointer;
+  /* margin-left: 0.5em; */
+  width: 80%;
+}
+
+@media (min-width: 600px) {
+
+  .nav {
+    padding: 0 6em;
+  }
+  
+  a {
+    font-size: 1.2em;
+  }
+
+  .title {
+    font-size: 4.5rem;
+  }
+
+  .task-input {
+    padding: 0.5em 1.5em;
+    font-size: 1rem;
+    margin: 1.5em 0;
+  }
+  #date-input {
+    font-size: 1rem;
+    padding: 0.3em 1em;
+    margin: 0 0 1.5em 0;
+  }
+  .submit {
+    font-size: 1.2rem;
+  }
+  .handle-error {
+    font-size: 1rem;
+    margin-top: 1.5em;
+  }
+  .taskShowcase,
+  .taskCompleted {
+    margin-top: 1.5em;
+    padding: 0 2em;
+  }
+  .sub-header,
+  .sub-header-complete {
+    font-size: 1.8rem;
+  }
+  .card {
+    padding: 1em 0;
+  }
+  .card + .card {
+    margin-top: 1.5em;
+  }
+  .insertTask,
+  .completedTask {
+    font-size: 1.5rem;
+  }
+
+  .date {
+    margin-top: 0.3em;
+    font-size: 1rem;
+  }
+  .deleteTitle {
+    display: flex;
+    align-items: center;
+  }
+  .trash {
+    width: 18px;
+  }
+}
+
+@media (min-width: 1000px) {
+  
+  .nav {
+    padding: 0 10em;
+  }
+  
+  a {
+    font-size: 1.6em;
+  }
+  .title {
+    font-size: 7rem;
+  }
+
+  .task-input {
+    padding: 0.8em 2em;
+    font-size: 1.8rem;
+    margin: 2em 0;
+    border-radius: 50px;
+  }
+  #date-input {
+    font-size: 2rem;
+    padding: 0.4em 1.3em;
+    margin: 0 0 2em 0;
+    border-radius: 25px;
+  }
+  .submit {
+    font-size: 2rem;
+    padding: 0.6em 2em;
+  }
+  .handle-error {
+    font-size: 2rem;
+    margin-top: 2em;
+  }
+  .taskShowcase,
+  .taskCompleted {
+    margin-top: 2em;
+    padding: 0 5em;
+  }
+  .sub-header,
+  .sub-header-complete {
+    font-size: 2.5rem;
+  }
+  .card {
+    padding: 1.4em 0;
+  }
+  .card + .card {
+    margin-top: 2em;
+  }
+  .insertTask,
+  .completedTask {
+    font-size: 2rem;
+  }
+  #input-radio {
+    width: 20px;
+  }
+  .date {
+    font-size: 1.5rem;
+  }
+  .trash {
+    width: 30px;
+  }
+}
